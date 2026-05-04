@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Giga Pet</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Giga Pet</h1>
-      <p>
-        Use the buttons to take care of your pet. Careful not to overfeed or underfeed it, and make sure to give it enough play and rest!
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>GigaPet – DevTools Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GigaPet – Mr Bean</h1>
+  </header>
 
-    <main>
-      <div class="pet-wrapper">
-        <div class="pet-image-container">
-          <!-- 8 Make sure to change the provided image to a new image of your choosing. -->
-          <img
-            src="images/dog-happy.png"
-            alt="Cartoon dog named Mr Bean"
-            class="pet-image"
-          />
-        </div>
+  <main>
+    <p>
+      Use the buttons to take care of your pet. Then open Chrome DevTools to see
+      logs, errors, and other messages for your Project 10 homework.
+    </p>
 
-        <div class="dashboard">
-          <p><span class="bold">Name:</span> <span class="name"></span></p>
-          <p><span class="bold">Weight:</span> <span class="weight"></span></p>
-          <p>
-            <span class="bold">Happiness:</span>
-            <span class="happiness"></span>
-          </p>
-          <p><span class="bold">Energy:</span> <span class="energy"></span></p>
+    <!-- DevTools demo: broken image to cause 404 network error -->
+    <!-- This file does NOT exist on purpose. Chrome will show a 404. -->
+    <img src="images/does-not-exist.png"
+         alt="broken debug image"
+         style="display:none;">
 
-          <div class="button-container">
-            <button class="treat-button">Treat</button>
-            <button class="play-button">Play</button>
-            <button class="exercise-button">Exercise</button>
-            <!-- 4 Add a new action button -->
-            <button class="nap-button">Nap</button>
-          </div>
-
-          <!-- 6 Add a visual notification after each button press with a comment from your pet. -->
-          <p class="pet-comment"></p>
-        </div>
+    <div class="pet-wrapper">
+      <div class="pet-image-container">
+        <img class="pet-image" src="images/dog-happy.jpg" alt="Mr Bean the dog">
       </div>
-    </main>
 
-    <footer>Project Gigapet JavaScript — COMP 484</footer>
+      <div class="dashboard">
+        <div>
+          <span class="bold">Name:</span>
+          <span class="name"></span>
+        </div>
+        <div>
+          <span class="bold">Weight:</span>
+          <span class="weight"></span>
+        </div>
+        <div>
+          <span class="bold">Happiness:</span>
+          <span class="happiness"></span>
+        </div>
+        <div>
+          <span class="bold">Energy:</span>
+          <span class="energy"></span>
+        </div>
 
-    <!-- jQuery must load before script.js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+        <div class="button-container">
+          <button class="treat-button">Treat</button>
+          <button class="play-button">Play</button>
+          <button class="exercise-button">Exercise</button>
+          <button class="nap-button">Nap</button>
+        </div>
+
+        <p class="pet-comment"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Tip: Press <span class="bold">F12</span> or <span class="bold">Ctrl+Shift+I</span>
+      (Windows) to open Chrome DevTools and view the Console.
+    </p>
+  </footer>
+
+  <!-- jQuery from CDN (same style as class examples) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Your project code -->
+  <script src="script.js"></script>
+</body>
 </html>
