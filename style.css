@@ -1,0 +1,113 @@
+/* Make padding and borders easier to control */
+* {
+  box-sizing: border-box;
+}
+
+/* Simple light theme that matches the cartoon image */
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 25px;
+  background-color: #f3f3f3;
+  color: #222222;
+}
+
+/* Header with a small bottom border so it feels like a title bar */
+header {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 15px;
+}
+
+/* Main content sits in a white card box */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+/* Keep text neat and readable */
+p {
+  max-width: 600px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Wrap the image and stats side by side using floats (from box‑model slides) */
+.pet-wrapper {
+  overflow: auto; /* clears the floats */
+}
+
+/* Image on the left with its own simple border */
+.pet-image-container {
+  float: left;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  background-color: #fafafa;
+}
+
+/* Fix image height to match layout */
+.pet-image {
+  height: 250px;
+}
+
+/* Stats box on the right in a “resume style” panel */
+.dashboard {
+  float: left;
+  margin-left: 20px;
+  padding: 15px;
+  width: 420px;
+  background-color: #fafafa;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.dashboard div {
+  display: block;
+}
+
+/* Button row under the stats */
+.button-container {
+  margin-top: 15px;
+}
+
+/* Basic flat buttons with small hover change */
+.button-container button {
+  width: 90px;
+  margin-right: 10px;
+  text-align: center;
+  float: left;
+  font-size: 14px;
+  padding: 4px 0;
+  background-color: #333333;
+  border: 1px solid #111111;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #555555;
+}
+
+/* Comment area for pet messages */
+.pet-comment {
+  clear: both;
+  margin-top: 20px;
+  min-height: 1.5em;
+  display: none; /* starts hidden so jQuery fadeIn is noticeable */
+}
+
+/* Highlight class used with jQuery .addClass() */
+.highlight {
+  font-weight: bold;
+  color: #1a4f8f;
+}
+
+/* Footer text a bit smaller */
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #555555;
+}
